@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PhotoBooth AI Assistant</title>
+  <style>
+    .card { border: 1px solid #ccc; padding: 10px; margin: 10px; }
+  </style>
+</head>
+<body>
+  <h1>PhotoBooth AI Assistant</h1>
+  <div id="poseCard" class="card"></div>
+  <div id="musicCard" class="card"></div>
+  <div id="filterCard" class="card"></div>
+  <div id="mapCard" class="card">
+    <iframe src="map.html" width="100%" height="400"></iframe>
+  </div>
+  <button id="saveBtn">Save Photo</button>
+<script>
+async function loadPose() {
+  const res = await fetch('pose.json');
+  const data = await res.json();
+  const card = document.getElementById('poseCard');
+  card.innerHTML = `<h2>Pose Recommendations</h2>` + data.map(p => `<div><img src="${p.image_url}" width="80"/><p>${p.name}</p><p>${p.description}</p></div>`).join('');
+}
+async function loadMusic() {
+  const res = await fetch('music.json');
+  const d = await res.json();
+  const card = document.getElementById('musicCard');
+  card.innerHTML = `<h2>Music & Quote</h2><p>${d.song} - ${d.artist}</p><blockquote>${d.quote}</blockquote>`;
+}
+async function loadFilter() {
+  const res = await fetch('../data/filter_styles.json');
+  const d = await res.json();
+  const firstBrand = Object.keys(d)[0];
+  const f = d[firstBrand][0];
+  const card = document.getElementById('filterCard');
+  card.innerHTML = `<h2>Suggested Filter</h2><p>${f.name}</p><img src="${f.preview}" width="150"/>`;
+}
+loadPose();
+loadMusic();
+loadFilter();
+document.getElementById('saveBtn').addEventListener('click', () => alert('Saved!'));
+</script>
+</body>
+</html>

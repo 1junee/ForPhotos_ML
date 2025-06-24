@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Peace Sign",
+    "image_url": "https://example.com/peace.jpg",
+    "description": "A casual peace sign with one hand.",
+    "keywords": [
+      "happy",
+      "casual",
+      "trend"
+    ]
+  },
+  {
+    "name": "Heart Hands",
+    "image_url": "https://example.com/heart.jpg",
+    "description": "Hands together forming a heart.",
+    "keywords": [
+      "love",
+      "cute",
+      "trend"
+    ]
+  },
+  {
+    "name": "Finger Gun",
+    "image_url": "https://example.com/finger_gun.jpg",
+    "description": "Playful finger gun pose.",
+    "keywords": [
+      "playful",
+      "happy"
+    ]
+  }
+]

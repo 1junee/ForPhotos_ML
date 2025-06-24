@@ -1,0 +1,16 @@
+[
+  {
+    "brand": "PhotoMagic",
+    "lat": 37.5665,
+    "lng": 126.9780,
+    "address": "Seoul City Hall",
+    "hours": "10:00-22:00"
+  },
+  {
+    "brand": "SnapShot",
+    "lat": 37.5700,
+    "lng": 126.9820,
+    "address": "Gwanghwamun",
+    "hours": "09:00-21:00"
+  }
+]
