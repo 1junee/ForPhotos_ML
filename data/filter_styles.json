@@ -1,0 +1,22 @@
+{
+  "BrandA": [
+    {
+      "name": "Soft Pastel",
+      "preview": "https://example.com/brandA_pastel.jpg"
+    },
+    {
+      "name": "Retro Film",
+      "preview": "https://example.com/brandA_retro.jpg"
+    }
+  ],
+  "BrandB": [
+    {
+      "name": "High Contrast",
+      "preview": "https://example.com/brandB_contrast.jpg"
+    },
+    {
+      "name": "Warm Glow",
+      "preview": "https://example.com/brandB_warm.jpg"
+    }
+  ]
+}
